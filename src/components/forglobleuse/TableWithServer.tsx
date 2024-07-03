@@ -40,7 +40,6 @@ function TableWithServer() {
     toggled: boolean;
   };
 
-  console.log("employees", employees);
 
   return (
     <DataTable

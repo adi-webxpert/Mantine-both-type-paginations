@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
 import { Select } from '@mantine/core';
 
@@ -6,11 +7,15 @@ export const AppList = ({ options, defaultValue, label, onChange, getSelectedOpt
   const onChangeValue = (option:any) => {
     if (option) {
       setValue(option.value);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       onChange && typeof onChange === 'function' ? onChange(option.value) : '';
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       getSelectedOption && typeof getSelectedOption === 'function' ? getSelectedOption(option) : '';
     } else {
       setValue(null);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       onChange && typeof onChange === 'function' ? onChange(null) : '';
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       getSelectedOption && typeof getSelectedOption === 'function' ? getSelectedOption(null) : '';
     }
   };
