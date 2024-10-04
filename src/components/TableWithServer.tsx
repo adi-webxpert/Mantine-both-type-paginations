@@ -23,34 +23,30 @@ function TableWithServer() {
   // Fetch data from the server when page or page size changes
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true); // Start loading before fetching
+      setLoading(true); 
       try {
         const { data } = await axios.get(
           `https://api.jikan.moe/v4/anime?limit=${pageSize}&page=${page}`
         );
-        console.log(data); // Check the response structure
         setEmployees(data?.data);
         setTotalRecords(data?.pagination.items.total);
       } catch (error) {
         console.error("Error fetching data", error);
       } finally {
-        setLoading(false); // Stop loading after fetching
+        setLoading(false); 
       }
     };
 
     fetchData();
   }, [page, pageSize]);
 
-  // Update the records based on the fetched employees
   useEffect(() => {
     setRecords(employees);
-    console.log("Employees:", employees); // Log the employees state
   }, [employees]);
 
-  // Render the DataTable only after the data is loaded
   return loading ? (
     <Center style={{ height: "100vh" }}>
-      <Loader size="lg" /> {/* Loading spinner */}
+      <Loader size="lg" /> 
     </Center>
   ) : records.length > 0 ? (
     <div className="container" style={{ margin: "20px", padding: "20px", borderRadius: "8px", backgroundColor: "#f9f9f9", boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)" }}>
