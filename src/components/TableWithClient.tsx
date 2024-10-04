@@ -44,7 +44,7 @@ export default function TableWithPagi() {
             accessor: "birthDate",
             textAlign: "right",
             width: 120,
-            render: ({ birthDate }) => dayjs(birthDate).format("MMM D YYYY"),
+            render: ({ birthDate  }) => dayjs(birthDate).format("MMM D YYYY"),
           },
         ]}
         totalRecords={employees.length}

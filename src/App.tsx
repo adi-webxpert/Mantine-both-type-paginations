@@ -1,9 +1,9 @@
 import "./App.css";
 import "@mantine/core/styles.css";
 import TableWithServer from "./components/TableWithServer.tsx";
-import TableWithPagi from "./components/TableWithClient.jsx";
+import TableWithPagi from "./components/TableWithClient.tsx";
 import { Route, Routes } from "react-router-dom";
-import Tables from "./components/Tables.jsx";
+import Tables from "./components/Tables.tsx";
 
 function App() {
   return (
