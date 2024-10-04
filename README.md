@@ -22,22 +22,7 @@ This project leverages the power of React, TypeScript, and Mantine Core UI to cr
    - Manages data locally.
    - Implements pagination for better user experience and data management.
 
-### Controlled Inputs
 
-1. **AutoSelect**
-   - An input component that provides suggestions as the user types.
-   
-2. **DatePicker**
-   - A component for selecting a single date from a calendar view.
-   
-3. **Simple Input**
-   - A basic input field for user text entry.
-   
-4. **MultiSelect Input**
-   - An input component that allows selecting multiple options from a list.
-   
-5. **DateRangePicker**
-   - A component for selecting a range of dates from a calendar view.
 
 ## Installation
 
